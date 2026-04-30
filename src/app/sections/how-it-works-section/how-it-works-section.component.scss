@@ -1,0 +1,60 @@
+.how-it-works-section {
+  padding: 1rem 0 5rem;
+}
+
+.panel {
+  padding: 2.2rem;
+  border-radius: 38px;
+}
+
+.compact-heading {
+  max-width: 42rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.step-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.step-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #8df0af;
+  font-weight: 900;
+}
+
+.step-card h3 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1080px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 1.3rem;
+  }
+}

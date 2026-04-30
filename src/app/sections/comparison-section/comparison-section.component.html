@@ -1,0 +1,62 @@
+<section id="porownanie" class="comparison-section">
+  <div class="container comparison-grid">
+    <div>
+      <div class="section-heading">
+        <span class="eyebrow">Porównanie planów</span>
+        <h2>Jasna tabela benefitów, która domyka decyzję zakupową.</h2>
+        <p>
+          Użytkownik od razu widzi różnicę między darmowym dostępem,
+          planem organizatora i pakietem premium dla regularnych grup.
+        </p>
+      </div>
+
+      <div class="table-shell glass-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Funkcja</th>
+              <th>Gracz</th>
+              <th>Playmaker</th>
+              <th>Kapitan</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of rows; track row.feature) {
+              <tr>
+                <td>{{ row.feature }}</td>
+                <td>{{ row.player }}</td>
+                <td>{{ row.playmaker }}</td>
+                <td>{{ row.captain }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="decision-shell glass-card">
+      <div class="decision-copy">
+        <small>Dlaczego ten blok konwertuje</small>
+        <h3>Cennik i porównanie prowadzą wprost do formularza</h3>
+        <p>
+          Zamiast dodatkowego obrazka obok tabeli pojawia się treść wspierająca decyzję:
+          dla kogo jest każdy plan i kiedy warto przejść na wyższy poziom.
+        </p>
+      </div>
+
+      <div class="decision-list">
+        @for (point of decisionPoints; track point.title) {
+          <article>
+            <strong>{{ point.title }}</strong>
+            <p>{{ point.description }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="decision-cta">
+        <span>Chcesz sprawdzić zainteresowanie przed startem?</span>
+        <button class="primary-button" type="button" (click)="scrollTo('cta')">Przejdź do formularza</button>
+      </div>
+    </aside>
+  </div>
+</section>

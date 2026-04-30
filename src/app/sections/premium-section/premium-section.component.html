@@ -1,0 +1,75 @@
+<section id="premium" class="premium-section">
+  <div class="container">
+    <div class="premium-top">
+      <div class="section-heading premium-heading">
+        <span class="eyebrow">Plany i widoczność</span>
+        <h2>Więcej kontroli dla organizatorów. Więcej widoczności dla Twoich meczów.</h2>
+        <p>
+          Sekcja premium została rozciągnięta i uporządkowana tak, aby cennik był czytelny,
+          lekki wizualnie i od razu prowadził użytkownika do formularza e-mail.
+        </p>
+      </div>
+
+      <div class="premium-visual glass-card">
+        <div class="visual-copy">
+          <small>Panel organizera</small>
+          <h3>Premium sprzedaje przez konkretne scenariusze użycia</h3>
+          <p>
+            Własny mockup UI pokazuje najważniejsze przewagi planów bez używania materiałów poglądowych.
+            Dzięki temu sekcja pozostaje spójna wizualnie i gotowa do dalszego rozwijania.
+          </p>
+        </div>
+
+        <div class="premium-mockup">
+          <div class="mockup-header">
+            <strong>OnlyFootball Premium</strong>
+            <span>Narzędzia organizera</span>
+          </div>
+
+          <div class="mockup-highlight">
+            <small>Aktywny mecz</small>
+            <strong>Środa • 20:30 • 9/12 graczy</strong>
+            <p>Automatyczne przypomnienia wysłane • wolne 3 miejsca • priorytetowa widoczność w aplikacji</p>
+          </div>
+
+          <div class="benefits-list">
+            @for (benefit of benefits; track benefit.title) {
+              <article>
+                <strong>{{ benefit.title }}</strong>
+                <p>{{ benefit.description }}</p>
+              </article>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      @for (plan of plans; track plan.name) {
+        <article class="plan-card glass-card" [class.highlighted]="plan.highlighted">
+          @if (plan.badge) {
+            <span class="plan-badge">{{ plan.badge }}</span>
+          }
+
+          <div class="plan-head">
+            <div>
+              <h3>{{ plan.name }}</h3>
+              <p class="plan-description">{{ plan.description }}</p>
+            </div>
+            <div class="plan-price">{{ plan.price }}<small>{{ plan.period }}</small></div>
+          </div>
+
+          <ul>
+            @for (feature of plan.features; track feature.text) {
+              <li [class.inactive]="feature.inactive">{{ feature.text }}</li>
+            }
+          </ul>
+
+          <button type="button" [class]="plan.highlighted ? 'primary-button' : 'secondary-button'" (click)="scrollTo('cta')">
+            {{ plan.cta }}
+          </button>
+        </article>
+      }
+    </div>
+  </div>
+</section>

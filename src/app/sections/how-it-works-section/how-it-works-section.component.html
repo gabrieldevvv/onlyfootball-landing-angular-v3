@@ -1,0 +1,22 @@
+<section id="jak-to-dziala" class="how-it-works-section">
+  <div class="container panel glass-card">
+    <div class="section-heading compact-heading">
+      <span class="eyebrow">Jak to działa</span>
+      <h2>Prosty flow od pierwszego logowania do pełnego składu na mecz.</h2>
+      <p>
+        Sekcja pokazuje, że platforma jest użyteczna zarówno dla gracza szukającego spotkania,
+        jak i dla organizatora, który chce prowadzić regularne rozgrywki.
+      </p>
+    </div>
+
+    <div class="steps-grid">
+      @for (step of steps; track step.index) {
+        <article class="step-card">
+          <span>{{ step.index }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

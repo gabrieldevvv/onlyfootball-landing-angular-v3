@@ -1,0 +1,23 @@
+<header class="site-header" [class.compact]="compact()">
+  <div class="container header-inner glass-card">
+    <button class="brand" type="button" (click)="scrollTo('hero')" aria-label="Przejdź do sekcji głównej">
+      <img
+        class="brand-logo"
+        src="assets/branding/onlyfootball-logo-header.png"
+        alt="OnlyFootball"
+      >
+    </button>
+
+    <nav class="desktop-nav" aria-label="Główna nawigacja">
+      @for (item of navItems; track item.target) {
+        <button type="button" (click)="scrollTo(item.target)">{{ item.label }}</button>
+      }
+    </nav>
+
+    <div class="header-actions">
+      <button class="primary-button" type="button" (click)="scrollTo('cta')">
+        Zostaw e-mail
+      </button>
+    </div>
+  </div>
+</header>

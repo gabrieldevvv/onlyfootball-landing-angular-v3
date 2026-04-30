@@ -1,0 +1,237 @@
+.premium-section {
+  padding: 5rem 0;
+}
+
+.premium-top {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.premium-heading {
+  margin-bottom: 0;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plan-card,
+.premium-visual {
+  border-radius: 34px;
+}
+
+.plan-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  min-height: 100%;
+}
+
+.plan-card.highlighted {
+  border-color: rgba(34, 197, 94, 0.34);
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.12), rgba(255, 255, 255, 0.03));
+}
+
+.plan-badge {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 0.8rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.14);
+  color: #8df0af;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plan-head {
+  display: grid;
+  gap: 1rem;
+}
+
+.plan-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.55rem;
+}
+
+.plan-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.plan-price {
+  font-size: 2.7rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.plan-price small {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.plan-card li {
+  position: relative;
+  padding-left: 1.35rem;
+  line-height: 1.6;
+}
+
+.plan-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.plan-card li.inactive {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.plan-card li.inactive::before {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.plan-card button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.premium-visual {
+  padding: 1.45rem;
+}
+
+.visual-copy small {
+  color: #8df0af;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+}
+
+.visual-copy h3 {
+  margin: 0.8rem 0 0.75rem;
+  font-size: 1.8rem;
+  line-height: 1.08;
+}
+
+.visual-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.premium-mockup {
+  margin-top: 1.25rem;
+  padding: 1.2rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(34, 197, 94, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-header strong {
+  font-size: 1.05rem;
+}
+
+.mockup-header span {
+  color: #8df0af;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mockup-highlight {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.18), rgba(34, 197, 94, 0.05));
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.mockup-highlight small {
+  display: inline-flex;
+  margin-bottom: 0.5rem;
+  color: #d4ffe3;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.mockup-highlight strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.mockup-highlight p {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+.benefits-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.benefits-list article {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.benefits-list strong {
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.benefits-list p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 1180px) {
+  .premium-top,
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
